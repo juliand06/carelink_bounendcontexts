@@ -1,0 +1,11 @@
+package com.carelink.infrastructure.handoffstatus.adapters.in.rest.dtos;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+public record CreateHandoffStatusRequest(
+        @NotNull(message = "label is required")
+        @Size(max = 50, message = "label must have at most 50 characters")
+        String label
+) {
+}
